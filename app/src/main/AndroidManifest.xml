@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="appponto.up.edu.br.appavisohorrios">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CadastrarActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ListarActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".FuncionarioAdapterActivity"></activity>
+        <receiver android:name=".AlarmReceiver">
+            <intent-filter >
+                <action android:name="EXECUTAR_ALARME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AlarmReceiverAlmoco">
+            <intent-filter >
+                <action android:name="EXECUTAR_ALMOCO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AlarmReceiverSaida">
+            <intent-filter >
+                <action android:name="EXECUTAR_SAIDA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

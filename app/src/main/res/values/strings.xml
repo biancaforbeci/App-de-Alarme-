@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App Aviso Horários</string>
+    <array name="Setor">
+        <item>Administração</item>
+        <item>Tecnologia da Informação</item>
+        <item>Marketing</item>
+        <item>Financeiro</item>
+    </array>
+
+
+</resources>
